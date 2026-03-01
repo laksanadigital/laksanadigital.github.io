@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>PT. Laksana Digital Industri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .hero__title {
+            font-family: 'Work Sans', sans-serif;
+            font-size: clamp(16px, 3.5vw, 3.5rem);
+            white-space: nowrap;
+            margin: 0 0 15px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #ffffff;
+        }
+
+        .hero__text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 60px;
+            color: #a9a9a9;
+            letter-spacing: 1px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px 30px;
+            border-radius: 8px;
+            min-width: 110px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            border: 1px solid rgba(212, 175, 55, 0.8);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        .countdown-item span {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 300;
+            font-family: 'Work Sans', sans-serif;
+            margin-bottom: 8px;
+            color: #D4AF37;
+        }
+
+        .countdown-item p {
+            margin: 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #888888;
+        }
+
+        .service__title {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .service__text {
+            color: #888888;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .contact__list {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact__list li a {
+            color: #888888;
+            font-size: 15px;
+            font-family: 'Work Sans', sans-serif;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .contact__list li a:hover {
+            color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        .contact__list li i {
+            margin-right: 12px;
+            font-size: 18px;
+            color: #D4AF37;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 40px 10px; }
+            .hero__title { font-size: clamp(12px, 4.5vw, 2.2rem); letter-spacing: 1px; }
+            .hero__text { font-size: 1rem; margin-bottom: 40px; }
+            .countdown { gap: 15px; margin-bottom: 40px;}
+            .countdown-item { min-width: 80px; padding: 20px 15px; flex: 1 1 40%;}
+            .countdown-item span { font-size: 2.5rem; }
+            .countdown-item p { font-size: 0.7rem; letter-spacing: 2px; }
+            .contact__list { flex-direction: column; gap: 15px; align-items: center; margin-top: 10px;}
+            .contact__list li a { font-size: 14px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero__title">PT. LAKSANA DIGITAL INDUSTRI</h1>
+            <p class="hero__text">Perusahaan Teknologi<br>Maju untuk Indonesia Emas 2045.</p>
+            
+            <div class="countdown" id="countdown-timer">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            
+            <div class="service">
+                <h2 class="service__title">Layanan Belum Tersedia</h2>
+                <p class="service__text">Kami sedang bersiap untuk peluncuran.</p>
+            </div>
+            
+            <ul class="contact__list">
+                <li>
+                    <a href="mailto:laksanadigitalindustri@hotmail.com">
+                        <i class="fa fa-envelope"></i> laksanadigitalindustri@hotmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:08567882625">
+                        <i class="fa fa-phone"></i> 0856-7882-625
+                    </a>
+                </li>
+                <li>
+                    <a href="https://laksanadigital.github.io" target="_blank">
+                        <i class="fa fa-globe"></i> laksanadigital.github.io
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const countDownDate = new Date("Aug 14, 2026 00:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            }
+            
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-timer").innerHTML = "<h2 style='color:#D4AF37; font-weight: 400; letter-spacing: 3px;'>KAMI SUDAH DIBUKA!</h2>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
