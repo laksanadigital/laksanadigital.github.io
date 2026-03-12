@@ -1,2 +1,2 @@
 # laksanadigital.github.io
-Halaman Utama
+Halaman Utama PT. Laksana Digital Industri
